@@ -1,0 +1,46 @@
+"use client";
+import { useLanguage } from "./LanguageContext";
+
+export default function About() {
+  const { language } = useLanguage();
+
+  const translations = {
+    es: {
+      title: "Sobre mí",
+      paragraphs: [
+        "Soy Leonardo Vásquez, Ingeniero de sistemas enfocado en el desarrollo de aplicaciones web modernas y en resolver problemas prácticos mediante la tecnología.",
+        "Trabajo principalmente con React, Next.js, TypeScript y JavaScript, con especial interés en el desarrollo frontend y las aplicaciones web full-stack.",
+        "Me interesa crear soluciones web funcionales, escalables y centradas en las necesidades de los usuarios y los negocios.",
+      ],
+    },
+
+    en: {
+      title: "About",
+      paragraphs: [
+        "I'm Leonardo Vásquez, a Systems Engineering focused on building modern web applications and solving practical problems through technology.",
+        "I primarily work with React, Next.js, TypeScript and JavaScript, with a strong interest in frontend development and full-stack web applications.",
+        "I'm interested in building functional, scalable web solutions focused on the needs of users and businesses.",
+      ],
+    },
+  };
+
+  const t = translations[language];
+
+  return (
+    <section id="about" className="border-t border-white/10">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-32 md:grid-cols-[200px_1fr]">
+        <div>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
+            {t.title}
+          </p>
+        </div>
+
+        <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-zinc-400">
+          {t.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
