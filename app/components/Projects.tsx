@@ -42,8 +42,8 @@ export default function Projects() {
 
   return (
     <section id="projects" className="border-t border-white/10">
-      <div className="mx-auto max-w-6xl px-6 py-32">
-        <div className="mb-16">
+      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-24 md:py-32">
+        <div className="mb-10 sm:mb-12 md:mb-16">
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
             {t.section}
           </p>
@@ -60,7 +60,7 @@ export default function Projects() {
             </p>
           </div>
 
-          <div className="grid gap-10 p-8 md:grid-cols-[1fr_auto] md:p-10">
+          <div className="grid gap-8 p-6 sm:p-8 md:grid-cols-[1fr_auto] md:gap-10 md:p-10">
             <div className="max-w-2xl">
               <h3 className="text-2xl font-semibold">
                 {t.projectTitle}
@@ -82,7 +82,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
+            <div className="flex flex-wrap gap-3">
               <a
                 href="https://caprichos-shop.vercel.app/"
                 target="_blank"
