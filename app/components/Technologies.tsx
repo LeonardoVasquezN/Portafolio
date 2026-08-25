@@ -30,15 +30,15 @@ export default function Technologies() {
 
   return (
     <section id="technologies" className="border-t border-white/10">
-      <div className="mx-auto max-w-6xl px-6 py-32">
-        <div className="grid gap-12 md:grid-cols-[200px_1fr]">
+      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-24 md:py-32">
+        <div className="grid gap-8 md:grid-cols-[200px_1fr] md:gap-12">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
               {t.section}
             </p>
           </div>
 
-          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:gap-10 lg:gap-12 sm:grid-cols-2 lg:grid-cols-3">
             <div>
               <h3 className="mb-5 text-sm font-medium text-white">
                 {t.frontend}
