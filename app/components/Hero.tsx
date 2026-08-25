@@ -29,22 +29,22 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="mx-auto flex min-h-screen max-w-6xl items-center px-6 pt-20"
+      className="mx-auto flex min-h-screen max-w-6xl items-center px-5 pt-20 sm:px-6"
     >
-      <div className="max-w-4xl">
+      <div className="max-w-4xl text-center md:text-left">
         <p className="mb-6 text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
           {t.greeting}
         </p>
 
-        <h1 className="text-6xl font-bold leading-[0.95] tracking-tight sm:text-7xl md:text-8xl">
+        <h1 className="text-4xl font-bold leading-[0.95] tracking-tight sm:text-6xl md:text-8xl">
           {t.title}
         </h1>
 
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl md:mx-0">
           {t.description}
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-wrap justify-center gap-4 md:justify-start">
           <a
             href="#projects"
             className="rounded-full bg-violet-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-violet-400"

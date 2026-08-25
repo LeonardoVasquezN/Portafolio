@@ -1,4 +1,5 @@
 "use client";
+
 import { useLanguage } from "./LanguageContext";
 
 export default function About() {
@@ -28,7 +29,7 @@ export default function About() {
 
   return (
     <section id="about" className="border-t border-white/10">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-32 md:grid-cols-[200px_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-20 sm:gap-10 sm:px-6 sm:py-24 md:grid-cols-[200px_1fr] md:gap-12 md:py-32">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
             {t.title}
