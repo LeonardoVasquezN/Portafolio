@@ -82,12 +82,12 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 md:flex-col">
               <a
                 href="https://caprichos-shop.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-violet-500 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-violet-400"
+                className="rounded-full bg-violet-500 px-5 py-2.5 text-center text-sm font-medium text-white transition hover:bg-violet-400 md:min-w-[130px]"
               >
                 {t.demo}
               </a>
@@ -96,7 +96,7 @@ export default function Projects() {
                 href="https://github.com/LeonardoVasquezN/CaprichosShop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-zinc-700 px-5 py-2.5 text-sm font-medium text-zinc-300 transition hover:border-zinc-500 hover:text-white"
+                className="rounded-full border border-zinc-700 px-5 py-2.5 text-center text-sm font-medium text-zinc-300 transition hover:border-zinc-500 hover:text-white md:min-w-[130px]"
               >
                 {t.github}
               </a>
