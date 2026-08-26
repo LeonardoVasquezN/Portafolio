@@ -1,5 +1,8 @@
 "use client";
 import { useLanguage } from "./LanguageContext";
+import { useState } from "react";
+
+import Image from "next/image";
 
 const technologies = [
   "Next.js",
@@ -9,8 +12,40 @@ const technologies = [
   "Supabase",
 ];
 
+const projectImages = [
+  {
+    src: "/projects/caprichosshop/Dashboard General.png",
+    alt: "Menú de mantenimientos de CaprichosShop",
+  },
+  {
+    src: "/projects/caprichosshop/Menú de mantenimientos.png",
+    alt: "Menú de mantenimientos de CaprichosShop",
+  },
+  {
+    src: "/projects/caprichosshop/Detalle de producto.png",
+    alt: "Detalle de producto de CaprichosShop",
+  },
+  {
+    src: "/projects/caprichosshop/Dashboard de ventas.png",
+    alt: "Dashboard de ventas de CaprichosShop",
+  },
+  {
+    src: "/projects/caprichosshop/Historialtabla de ventas.png",
+    alt: "Historial de ventas de CaprichosShop",
+  },
+  {
+    src: "/projects/caprichosshop/Nota de venta.png",
+    alt: "Nota de venta de CaprichosShop",
+  },
+  {
+    src: "/projects/caprichosshop/impresión.png",
+    alt: "Impresión de nota de venta de CaprichosShop",
+  },
+];
+
 export default function Projects() {
   const { language } = useLanguage();
+  const [selectedImage, setSelectedImage] = useState(projectImages[0].src);
 
   const translations = {
     es: {
@@ -54,10 +89,34 @@ export default function Projects() {
         </div>
 
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
-          <div className="flex aspect-video items-center justify-center bg-zinc-900">
-            <p className="text-sm text-zinc-500">
-              {t.screenshot}
-            </p>
+          <div className="relative aspect-video bg-zinc-900">
+            <Image
+              src={selectedImage}
+              alt="CaprichosShop"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 p-4 sm:grid-cols-3">
+            {projectImages.map((image) => (
+              <button
+                key={image.src}
+                onClick={() => setSelectedImage(image.src)}
+                className={`relative aspect-video overflow-hidden rounded-lg bg-zinc-900 transition ${
+                  selectedImage === image.src
+                    ? "ring-2 ring-violet-500"
+                    : "opacity-70 hover:opacity-100"
+                }`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
+              </button>
+            ))}
           </div>
 
           <div className="grid gap-8 p-6 sm:p-8 md:grid-cols-[1fr_auto] md:gap-10 md:p-10">
