@@ -38,7 +38,7 @@ const projectImages = [
     alt: "Nota de venta de CaprichosShop",
   },
   {
-    src: "/projects/caprichosshop/impresión.png",
+    src: "/projects/caprichosshop/Impresión.png",
     alt: "Impresión de nota de venta de CaprichosShop",
   },
 ];
