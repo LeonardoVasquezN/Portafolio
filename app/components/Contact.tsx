@@ -1,5 +1,7 @@
 "use client";
+
 import { useLanguage } from "./LanguageContext";
+import Reveal from "./Reveal";
 
 export default function Contact() {
   const { language } = useLanguage();
@@ -30,35 +32,43 @@ export default function Contact() {
     <section id="contact" className="border-t border-white/10">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
-            {t.section}
-          </p>
+          <Reveal>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
+              {t.section}
+            </p>
+          </Reveal>
 
-          <h2 className="mt-5 text-5xl font-bold tracking-tight sm:text-6xl">
-            {t.title}
-          </h2>
+          <Reveal delay={0.1}>
+            <h2 className="mt-5 text-5xl font-bold tracking-tight sm:text-6xl">
+              {t.title}
+            </h2>
+          </Reveal>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-            {t.description}
-          </p>
+          <Reveal delay={0.2}>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
+              {t.description}
+            </p>
+          </Reveal>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="mailto:TU_EMAIL@gmail.com"
-              className="rounded-full bg-violet-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-violet-400"
-            >
-              {t.email}
-            </a>
+          <Reveal delay={0.3}>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="mailto:TU_EMAIL@gmail.com"
+                className="rounded-full bg-violet-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-violet-400"
+              >
+                {t.email}
+              </a>
 
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-zinc-500 hover:text-white"
-            >
-              {t.linkedin}
-            </a>
-          </div>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-zinc-500 hover:text-white"
+              >
+                {t.linkedin}
+              </a>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
