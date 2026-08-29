@@ -1,5 +1,7 @@
 "use client";
+
 import { useLanguage } from "./LanguageContext";
+import Reveal from "./Reveal";
 
 const technologies = {
   frontend: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS"],
@@ -32,63 +34,71 @@ export default function Technologies() {
     <section id="technologies" className="border-t border-white/10">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="grid gap-8 md:grid-cols-[200px_1fr] md:gap-12">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
-              {t.section}
-            </p>
-          </div>
-
-          <div className="grid gap-8 sm:gap-10 lg:gap-12 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal>
             <div>
-              <h3 className="mb-5 text-sm font-medium text-white">
-                {t.frontend}
-              </h3>
-
-              <ul className="space-y-3">
-                {technologies.frontend.map((technology) => (
-                  <li
-                    key={technology}
-                    className="text-zinc-400 transition-colors hover:text-white"
-                  >
-                    {technology}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
+                {t.section}
+              </p>
             </div>
+          </Reveal>
 
-            <div>
-              <h3 className="mb-5 text-sm font-medium text-white">
-                {t.backend}
-              </h3>
+          <div className="grid gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <Reveal delay={0.1}>
+              <div>
+                <h3 className="mb-5 text-sm font-medium text-white">
+                  {t.frontend}
+                </h3>
 
-              <ul className="space-y-3">
-                {technologies.backend.map((technology) => (
-                  <li
-                    key={technology}
-                    className="text-zinc-400 transition-colors hover:text-white"
-                  >
-                    {technology}
-                  </li>
-                ))}
-              </ul>
-            </div>
+                <ul className="space-y-3">
+                  {technologies.frontend.map((technology) => (
+                    <li
+                      key={technology}
+                      className="text-zinc-400 transition-colors hover:text-white"
+                    >
+                      {technology}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
 
-            <div>
-              <h3 className="mb-5 text-sm font-medium text-white">
-                {t.tools}
-              </h3>
+            <Reveal delay={0.2}>
+              <div>
+                <h3 className="mb-5 text-sm font-medium text-white">
+                  {t.backend}
+                </h3>
 
-              <ul className="space-y-3">
-                {technologies.tools.map((technology) => (
-                  <li
-                    key={technology}
-                    className="text-zinc-400 transition-colors hover:text-white"
-                  >
-                    {technology}
-                  </li>
-                ))}
-              </ul>
-            </div>
+                <ul className="space-y-3">
+                  {technologies.backend.map((technology) => (
+                    <li
+                      key={technology}
+                      className="text-zinc-400 transition-colors hover:text-white"
+                    >
+                      {technology}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.3}>
+              <div>
+                <h3 className="mb-5 text-sm font-medium text-white">
+                  {t.tools}
+                </h3>
+
+                <ul className="space-y-3">
+                  {technologies.tools.map((technology) => (
+                    <li
+                      key={technology}
+                      className="text-zinc-400 transition-colors hover:text-white"
+                    >
+                      {technology}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           </div>
         </div>
       </div>
