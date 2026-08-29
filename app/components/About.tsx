@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "./LanguageContext";
+import Reveal from "./Reveal";
 
 export default function About() {
   const { language } = useLanguage();
@@ -30,15 +31,19 @@ export default function About() {
   return (
     <section id="about" className="border-t border-white/10">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-20 sm:gap-10 sm:px-6 sm:py-24 md:grid-cols-[200px_1fr] md:gap-12 md:py-32">
-        <div>
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
-            {t.title}
-          </p>
-        </div>
+        <Reveal>
+          <div>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-violet-400">
+              {t.title}
+            </p>
+          </div>
+        </Reveal>
 
         <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-zinc-400">
-          {t.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {t.paragraphs.map((paragraph, index) => (
+            <Reveal key={paragraph} delay={index * 0.1}>
+              <p>{paragraph}</p>
+            </Reveal>
           ))}
         </div>
       </div>
